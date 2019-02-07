@@ -14,10 +14,19 @@ soup = BeautifulSoup(f.read(), 'html.parser')
 # for r in results:
 # 	print(r.text)
 
-results = soup.find('table').children
+# results = soup.find('table').children
+
+# for r in results:
+# 	print(r)
+
+
+results = soup.find_all('tr')
 
 for r in results:
-	print(r)
+	for c in r.children:
+		print(c)
+		
+
 
 
 
