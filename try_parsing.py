@@ -8,13 +8,24 @@ soup = BeautifulSoup(f.read(), 'html.parser')
 
 #print(soup.td)
 
-results = soup.find_all('td')
-# print(results)
+# results = soup.find_all('td')
+# # print(results)
+
+# for r in results:
+# 	print(r.text)
+
+results = soup.find('table').children
 
 for r in results:
-	print(r.text)
+	print(r)
 
-	
+
+
+
+
+
+
+
 
 
 
