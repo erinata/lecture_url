@@ -20,17 +20,20 @@ soup = BeautifulSoup(f.read(), 'html.parser')
 # 	print(r)
 
 
-results = soup.find_all('tr')
+# results = soup.find_all('tr')
+
+# for r in results:
+# 	for c in r.children:
+# 		print(c)
+
+
+
+results = soup.find_all('td',attrs={'class' : 'user'})
+
+# print(results)
 
 for r in results:
-	for c in r.children:
-		print(c)
-		
-
-
-
-
-
+	print(r.text)
 
 
 
